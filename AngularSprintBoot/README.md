@@ -36,7 +36,7 @@ Para poder llevar el curso es necesario instalar lo siguiente:
   ng version
   ```
 
-- Asimismo, se recomienda instalar los siguientes paquete:
+- Asimismo, si se usa Atom como editor de código, se recomienda instalar los siguientes paquete:
   
   - `angular-2-typescript-snippets`
   
