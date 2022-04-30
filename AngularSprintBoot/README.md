@@ -8,7 +8,7 @@ Para poder llevar el curso es necesario instalar lo siguiente:
   
   ```shell
   ## Validar la instalación
-  npm -v
+  node -v
   ```
 
 - npm
@@ -22,7 +22,10 @@ Para poder llevar el curso es necesario instalar lo siguiente:
   
   ```shell
   ## Ejecutar como administrador
+  ## Windows
   npm install -g typescript
+  ## Ubuntu
+  sudo npm install -g typescript
   ## Validar la instalación
   tsc -v
   ```
@@ -31,7 +34,10 @@ Para poder llevar el curso es necesario instalar lo siguiente:
   
   ```shell
   ## Ejecutar como administrador
+  ## Windows
   npm install -g @angular/cli
+  ## Ubuntu
+  sudo npm install -g @angular/cli
   ## Validar la instalación
   ng version
   ```
@@ -73,4 +79,14 @@ Luego de crear la aplicación, abrir la carpeta creada con el nombre de la aplic
 
 ```shell
 ng serve --open
+# o
+mg serve -o
 ```
+
+En el caso de que tengan que ejecutar el código fuente y no se ha instalado las dependencias, se debe ejecutar la siguiente sentencia:
+
+```shell
+npm install
+```
+
+ddsadasd
