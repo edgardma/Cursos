@@ -83,10 +83,18 @@ ng serve --open
 mg serve -o
 ```
 
+En el caso que no salga ningún error, se abrirá el navegador por defecto, tanto para Windows como para Linux, mostrando la página principal
+
 En el caso de que tengan que ejecutar el código fuente y no se ha instalado las dependencias, se debe ejecutar la siguiente sentencia:
 
 ```shell
 npm install
 ```
 
-ddsadasd
+Para crear una clase TypeScript desde línea de comando, como por ejemplo la clase `footer.component`, ejecutar la siguiente sentencia:
+
+```shell
+ng generate class footer.component
+```
+
+xxx
