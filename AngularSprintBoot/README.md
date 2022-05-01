@@ -97,4 +97,20 @@ Para crear una clase TypeScript desde línea de comando, como por ejemplo la cla
 ng generate class footer.component
 ```
 
-xxx
+Para crear un componente de Angular desde la línea de comando, como por ejemplo el componente `directiva`, ejecutar la siguiente sentencia:
+
+```shell
+ng generate component directiva
+## o
+ng g c directiva
+```
+
+En este caso, Angular crea y/o actualiza los siguientes archivos:
+
+```shell
+CREATE src/app/directiva/directiva.component.css (0 bytes)
+CREATE src/app/directiva/directiva.component.html (24 bytes)
+CREATE src/app/directiva/directiva.component.spec.ts (647 bytes)
+CREATE src/app/directiva/directiva.component.ts (287 bytes)
+UPDATE src/app/app.module.ts (572 bytes)
+```
