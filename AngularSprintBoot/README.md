@@ -91,7 +91,7 @@ En el caso de que tengan que ejecutar el código fuente y no se ha instalado las
 npm install
 ```
 
-Para crear una clase TypeScript desde línea de comando, como por ejemplo la clase `footer.component`, ejecutar la siguiente sentencia:
+Para crear una clase `TypeScript` desde línea de comando, como por ejemplo la clase `footer.component`, ejecutar la siguiente sentencia:
 
 ```shell
 ng generate class footer.component
@@ -113,4 +113,19 @@ CREATE src/app/directiva/directiva.component.html (24 bytes)
 CREATE src/app/directiva/directiva.component.spec.ts (647 bytes)
 CREATE src/app/directiva/directiva.component.ts (287 bytes)
 UPDATE src/app/app.module.ts (572 bytes)
+```
+
+Para crear un servicio de Angular desde línea de comando, como por ejemplo, el servicio `cliente`, ejecutar la siguiente sentencia:
+
+```shell
+ng generate service cliente
+## o
+ng g service cliente
+```
+
+En este caso, Angular crea los siguientes archivos:
+
+``` 
+CREATE src/app/clientes/cliente.service.spec.ts (362 bytes)
+CREATE src/app/clientes/cliente.service.ts (136 bytes)
 ```
