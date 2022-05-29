@@ -125,7 +125,15 @@ ng g service cliente
 
 En este caso, Angular crea los siguientes archivos:
 
-``` 
+```bash
 CREATE src/app/clientes/cliente.service.spec.ts (362 bytes)
 CREATE src/app/clientes/cliente.service.ts (136 bytes)
+```
+
+Para instalar Bootstrap, JQuery y Popper desde línea de comandos, nos ubicamos en la carpeta del proyecto y ejecutar el siguiente comando:
+
+```shell
+## La clausula 'save' es para registrar la dependencia en el archivo
+## package.json del proyecto
+npm install bootstrap@5.1.3 jquery popper.js --save
 ```
