@@ -1,6 +1,6 @@
 # Angular & Spring Boot: Creando web app full stack
 
-## Instalación:
+## Instalación herramientas Front-end:
 
 Para poder llevar el curso es necesario instalar lo siguiente:
 
@@ -137,3 +137,17 @@ Para instalar Bootstrap, JQuery y Popper desde línea de comandos, nos ubicamos 
 ## package.json del proyecto
 npm install bootstrap@5.1.3 jquery popper.js --save
 ```
+
+## Instalación de herramientas de Back-end:
+
+Para esta parte del proyecto, se necesita la instalación de los siguientes software:
+
+* JDK
+
+* Eclipse + Spring Tools
+
+* Maven
+
+* MySQL
+
+* Postman
