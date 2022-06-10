@@ -151,3 +151,21 @@ Para esta parte del proyecto, se necesita la instalación de los siguientes soft
 * MySQL
 
 * Postman
+
+## Creación de la base de datos
+
+Para crear la base de datos en el MySQL ingresar a la consola y ejecutar la siguiente sentencia:
+
+```shell
+mysql -u root -p
+```
+
+Seguidamente, solicitará ingresar la clave del usuario `root`, luego de ingresarla, le permitirá ejecutar sentencias `SQL` y se debe ejecutar la siguiente sentencia para crear la BD:
+
+```sql
+# Crear la bd
+CREATE DATABASE db_springboot_backend;
+
+# Para validar la creación de la bd
+SHOW DATABASES;
+```
