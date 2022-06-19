@@ -169,3 +169,21 @@ CREATE DATABASE db_springboot_backend;
 # Para validar la creación de la bd
 SHOW DATABASES;
 ```
+
+
+
+## Cargar datos iniciales a la BD MySQL desde el proyecto Java
+
+Para cargar datos iniciales a la BD MySQL desde el proyecto de Java, se debe crear un archivo `import.sql` en la ruta `resources` del mismo proyecto. Las siguientes sentencias SQL son un ejemplo de dicho archivo:
+
+```sql
+INSERT INTO `db_springboot_backend`.`clientes` (`nombre`, `apellido`, `email`, `create_at`) VALUES ('Edgard', 'Marquez', 'prueba1@empresa.com', '2020-01-01');
+```
+
+ 
+
+## Prueba del servicio API Rest
+
+Para probar nuestra API, primero se debe ejecutar el proyecto `spring-boot-backedn-apirest` y desde el navegador ingresar la siguiente URL:
+
+`http://localhost:8080/api/clientes/`
