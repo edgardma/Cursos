@@ -152,6 +152,10 @@ Para esta parte del proyecto, se necesita la instalación de los siguientes soft
 
 * Postman
 
+Para el caso del IDE de STS, se recomienda instalar las herramientas de base de datos, para ello se debe ir al menú `Help / Install new software` y buscar `Database Development`.
+
+
+
 ## Creación de la base de datos
 
 Para crear la base de datos en el MySQL ingresar a la consola y ejecutar la siguiente sentencia:
