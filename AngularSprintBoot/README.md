@@ -154,8 +154,6 @@ Para esta parte del proyecto, se necesita la instalación de los siguientes soft
 
 Para el caso del IDE de STS, se recomienda instalar las herramientas de base de datos, para ello se debe ir al menú `Help / Install new software` y buscar `Database Development`.
 
-
-
 ## Creación de la base de datos
 
 Para crear la base de datos en el MySQL ingresar a la consola y ejecutar la siguiente sentencia:
@@ -174,8 +172,6 @@ CREATE DATABASE db_springboot_backend;
 SHOW DATABASES;
 ```
 
-
-
 ## Cargar datos iniciales a la BD MySQL desde el proyecto Java
 
 Para cargar datos iniciales a la BD MySQL desde el proyecto de Java, se debe crear un archivo `import.sql` en la ruta `resources` del mismo proyecto. Las siguientes sentencias SQL son un ejemplo de dicho archivo:
@@ -184,10 +180,28 @@ Para cargar datos iniciales a la BD MySQL desde el proyecto de Java, se debe cre
 INSERT INTO `db_springboot_backend`.`clientes` (`nombre`, `apellido`, `email`, `create_at`) VALUES ('Edgard', 'Marquez', 'prueba1@empresa.com', '2020-01-01');
 ```
 
- 
-
 ## Prueba del servicio API Rest
 
 Para probar nuestra API, primero se debe ejecutar el proyecto `spring-boot-backedn-apirest` y desde el navegador ingresar la siguiente URL:
 
 `http://localhost:8080/api/clientes/`
+
+
+
+## Crear un componente formulario
+
+Para crear un formulario, se debe ejecutar la siguiente sentencia:
+
+```shell
+ng g c clientes/form --flat
+```
+
+Con esto se creará el componente dentro de la carpeta `clientes/form` con los siguientes archivos:
+
+```
+CREATE src/app/clientes/form.component.html (19 bytes)
+CREATE src/app/clientes/form.component.spec.ts (612 bytes)
+CREATE src/app/clientes/form.component.ts (267 bytes)
+CREATE src/app/clientes/form.component.css (0 bytes)
+UPDATE src/app/app.module.ts (1213 bytes)
+```
