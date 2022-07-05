@@ -130,13 +130,25 @@ CREATE src/app/clientes/cliente.service.spec.ts (362 bytes)
 CREATE src/app/clientes/cliente.service.ts (136 bytes)
 ```
 
-Para instalar Bootstrap, JQuery y Popper desde línea de comandos, nos ubicamos en la carpeta del proyecto y ejecutar el siguiente comando:
+Para instalar Bootstrap, JQuery y Popper desde línea de comandos, nos ubicamos en la carpeta del proyecto y ejecutar el siguiente comando (el comando `--save` es para que se registre en el archivo `package.json` la dependencia):
 
 ```shell
 ## La clausula 'save' es para registrar la dependencia en el archivo
 ## package.json del proyecto
 npm install bootstrap@5.1.3 jquery popper.js --save
 ```
+
+Asimismo, se debe instalar el paquete `SweetAlert2` se debe ejecutar la siguiente sentencia desde la ruta del proyecto:
+
+```shell
+## Para instalar la última versión
+npm install sweetalert2 --save
+
+## Para instalar la versión del tutorial
+npm install --save sweetalert2@7.26.9
+```
+
+
 
 ## Instalación de herramientas de Back-end:
 
@@ -180,13 +192,11 @@ Para cargar datos iniciales a la BD MySQL desde el proyecto de Java, se debe cre
 INSERT INTO `db_springboot_backend`.`clientes` (`nombre`, `apellido`, `email`, `create_at`) VALUES ('Edgard', 'Marquez', 'prueba1@empresa.com', '2020-01-01');
 ```
 
-## Prueba del servicio API Rest
+## Prueba del servicio API REST
 
 Para probar nuestra API, primero se debe ejecutar el proyecto `spring-boot-backedn-apirest` y desde el navegador ingresar la siguiente URL:
 
 `http://localhost:8080/api/clientes/`
-
-
 
 ## Crear un componente formulario
 
