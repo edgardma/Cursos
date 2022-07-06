@@ -148,8 +148,6 @@ npm install sweetalert2 --save
 npm install --save sweetalert2@7.26.9
 ```
 
-
-
 ## Instalación de herramientas de Back-end:
 
 Para esta parte del proyecto, se necesita la instalación de los siguientes software:
