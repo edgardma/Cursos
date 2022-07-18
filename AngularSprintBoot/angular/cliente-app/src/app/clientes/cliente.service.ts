@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable()
 export class ClienteService {
   private urlEndPoint:string = 'http://localhost:8090/api/clientes';
-  private httHeaders = new HttpHeaders({'Content-Type':'application/json'})
+  private httpHeaders = new HttpHeaders({'Content-Type':'application/json'})
 
   constructor(private http: HttpClient) { }
 
@@ -15,11 +15,15 @@ export class ClienteService {
   }
 
   create(cliente: Cliente) : Observable<Cliente> {
-    return this.http.post<Cliente>(this.urlEndPoint, cliente, {headers: this.httHeaders})
+    return this.http.post<Cliente>(this.urlEndPoint, cliente, {headers: this.httpHeaders})
   }
 
   getCliente(id): Observable<Cliente> {
     return this.http.get<Cliente>(`${this.urlEndPoint}/${id}`)
+  }
+
+  update(cliente: Cliente): Observable<Cliente> {
+    return this.http.put<Cliente>(`${this.urlEndPoint}/${cliente.id}`, cliente, {headers: this.httpHeaders})
   }
 
 }
