@@ -20,7 +20,7 @@ export class ClienteService {
     return this.http.post<Cliente>(this.urlEndPoint, cliente, {headers: this.httpHeaders}).pipe(
       catchError(e => {
         console.error(e.error.mensaje);
-        swal('Error al crear', e.error.mensaje, 'error');
+        swal(e.error.mensaje, e.error.error, 'error');
         return throwError(e);
       })
     );
@@ -40,6 +40,7 @@ export class ClienteService {
   update(cliente: Cliente): Observable<Cliente> {
     return this.http.put<Cliente>(`${this.urlEndPoint}/${cliente.id}`, cliente, {headers: this.httpHeaders}).pipe(
       catchError(e => {
+        console.error(e.error.mensaje);
         swal('Error al actualizar', e.error.mensaje, 'error');
         return throwError(e);
       })
@@ -49,6 +50,7 @@ export class ClienteService {
   delete(id: number): Observable<Cliente> {
     return this.http.delete<Cliente>(`${this.urlEndPoint}/${id}`, {headers: this.httpHeaders}).pipe(
       catchError(e => {
+        console.error(e.error.mensaje);
         swal('Error al eliminar', e.error.mensaje, 'error');
         return throwError(e);
       })
