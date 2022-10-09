@@ -20,8 +20,8 @@ export class ClienteService {
           cliente.nombre = cliente.nombre.toUpperCase()
           //cliente.creatAt = formatDate(cliente.creatAt, 'dd-MM-yyyy', 'en-US')
 
-          let datePipe = new DatePipe('es-PE')
-          cliente.creatAt = datePipe.transform(cliente.creatAt, 'EEEE dd, MMMM yyyy')
+          //let datePipe = new DatePipe('es-PE')
+          //cliente.creatAt = datePipe.transform(cliente.creatAt, 'EEEE dd, MMMM yyyy')
           return cliente
         })
       })
