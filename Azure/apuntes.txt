@@ -1,0 +1,57 @@
+TENA
+
+user: useradmin
+pass: Password2022
+
+-- Instalar un IIS en Windows
+Install-WindowsFeature -name Web-Server -IncludeManagementTools
+
+az-cli:
+az webapp list -o table
+
+PowerShell:
+Get-AzureRmWebApp
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-cli
+-- Crear el grupo de recursos
+az group create --name rg-emma02 --location eastus
+
+-- Crear la maquina virtual
+az vm create \
+    --resource-group rg-emma02 \
+    --name myVM \
+    --image Win2022AzureEditionCore \
+    --public-ip-sku Standard \
+    --admin-username azureuser 
+-- Resultado	
+{
+  "fqdns": "",
+  "id": "/subscriptions/bbbaefa4-dac7-485d-aaff-fb93543946c5/resourceGroups/rg-emma02/providers/Microsoft.Compute/virtualMachines/myVM",
+  "location": "eastus",
+  "macAddress": "00-0D-3A-54-F0-86",
+  "powerState": "VM running",
+  "privateIpAddress": "10.0.0.4",
+  "publicIpAddress": "20.172.150.7",
+  "resourceGroup": "rg-emma02",
+  "zones": ""
+}
+
+-- Instalar el IIS en el servidor
+az vm run-command invoke -g rg-emma02 -n MyVm --command-id RunPowerShellScript --scripts "Install-WindowsFeature -name Web-Server -IncludeManagementTools"
+
+-- Abrir el puerto 80
+az vm open-port --port 80 --resource-group rg-emma02 --name myVM
+
+-- Eliminar el grupo de recursos
+az group delete --name rg-emma02
+
+
+https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
+
+https://www.microsoft.com/es-ww/trust-center
+
+https://learn.microsoft.com/en-us/compliance/
+
+https://azure.microsoft.com/en-us/pricing/calculator
+
+https://azure.microsoft.com/en-us/pricing/tco/calculator/
