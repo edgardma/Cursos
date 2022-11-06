@@ -44,6 +44,7 @@ public class Cliente implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date creatAt;
 	
+	private String foto;
 	
 	public Long getId() {
 		return id;
@@ -74,6 +75,12 @@ public class Cliente implements Serializable {
 	}
 	public void setCreatAt(Date creatAt) {
 		this.creatAt = creatAt;
+	}
+	public String getFoto() {
+		return foto;
+	}
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 	
 }
