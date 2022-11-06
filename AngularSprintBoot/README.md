@@ -213,3 +213,15 @@ CREATE src/app/clientes/form.component.ts (267 bytes)
 CREATE src/app/clientes/form.component.css (0 bytes)
 UPDATE src/app/app.module.ts (1213 bytes)
 ```
+
+## Instalación de otros módulos para Angular:
+
+Para el uso de un control `DatePicker`, se debe instalar lo siguiente:
+
+```shell
+ng add @angular/material
+
+ng add @angular/material-moment-adapter
+
+npm install --save moment
+```
