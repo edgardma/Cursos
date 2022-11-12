@@ -55,3 +55,99 @@ https://learn.microsoft.com/en-us/compliance/
 https://azure.microsoft.com/en-us/pricing/calculator
 
 https://azure.microsoft.com/en-us/pricing/tco/calculator/
+
+https://azure.microsoft.com/en-us/updates/
+
+Simulador:
+=========
+https://www.examtopics.com/exams/microsoft/az-900/view/
+
+
+TENAN
+
+https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-licensing#available-versions-of-azure-ad-multi-factor-authentication
+
+===============================================================================================
+Clase 26/10
+===========
+
+https://www.examtopics.com/exams/microsoft/az-900/
+
+https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
+
+https://1drv.ms/t/s!ArqwfjvG_i6Ngh8t_BSco6lXCwLN?e=5goJo5
+
+### Script:
+
+###Creación de custom role
+az role definition create --role-definition "virtualmachineoperator.json"
+
+###actualización de custom role
+az role definition update --role-definition "virtualmachineoperator.json"
+
+###mostrar detalle de custom role
+az role definition list  --name "Virtual Machine Operator"
+
+
+####Role Demo
+{
+  "Name": "Virtual Machine Operator10",
+  "IsCustom": true,
+  "Description": "Can monitor and restart virtual machines.",
+  "Actions": [
+    "Microsoft.Storage/*",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Network/*",
+    "Microsoft.Compute/*",
+    "Microsoft.Authorization/*/read"
+  ],
+  "NotActions": [],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    "/subscriptions/87722fb1-502f-4196-9178-6b19035104ec"
+  ]
+}
+
+
+##### no Acciones
+  "Microsoft.Compute/virtualMachines/restart/action"
+
+================================
+## Sentencias 
+  
+code virtualmachineoperator.json
+
+## Copiar dentro del editor
+
+
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template?tabs=azure-powershell
+
+================================================
+
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template?tabs=azure-powershell
+
+code azuredeploy.json
+
+$templateFile="azuredeploy.json"
+
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-functions
+
+
+================================================
+https://learn.microsoft.com/es-es/azure/dns/dns-private-resolver-overview
+
+https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices
+
+
+================================================
+$connectTestResult = Test-NetConnection -ComputerName storageemma01.file.core.windows.net -Port 445
+if ($connectTestResult.TcpTestSucceeded) {
+    # Save the password so the drive will persist on reboot
+    cmd.exe /C "cmdkey /add:`"storageemma01.file.core.windows.net`" /user:`"localhost\storageemma01`" /pass:`"59rLebAmeQ8fTIE2da4FY4ZwKcEpjTgg5MjTGFcgBBbLGHhJmxsLGTrTXgs3MxZXvT4WX4ziB0Fu+AStBRAV3g==`""
+    # Mount the drive
+    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\storageemma01.file.core.windows.net\compartido" -Persist
+} else {
+    Write-Error -Message "Unable to reach the Azure storage account via port 445. Check to make sure your organization or ISP is not blocking port 445, or use Azure P2S VPN, Azure S2S VPN, or Express Route to tunnel SMB traffic over a different port."
+
+https://azure.microsoft.com/en-us/pricing/details/virtual-machines/series/
