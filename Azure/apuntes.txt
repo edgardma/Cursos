@@ -3,6 +3,7 @@ TENA
 user: useradmin
 pass: Password2022
 
+
 -- Instalar un IIS en Windows
 Install-WindowsFeature -name Web-Server -IncludeManagementTools
 
@@ -151,3 +152,146 @@ if ($connectTestResult.TcpTestSucceeded) {
     Write-Error -Message "Unable to reach the Azure storage account via port 445. Check to make sure your organization or ISP is not blocking port 445, or use Azure P2S VPN, Azure S2S VPN, or Express Route to tunnel SMB traffic over a different port."
 
 https://azure.microsoft.com/en-us/pricing/details/virtual-machines/series/
+
+
+===============================================
+16/11/2022
+https://learn.microsoft.com/en-us/azure/app-service/quickstart-arm-template?pivots=platform-linux
+
+Casos de estudio:
+https://microsoftlearning.github.io/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/
+
+https://microsoftlearning.github.io/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/Instructions/CaseStudy/01-Governance.html
+
+https://microsoftlearning-github-io.translate.goog/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/Instructions/CaseStudy/01-Governance.html?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp
+
+
+
+functiondemo
+
+
+SELECT firstName, lastName
+FROM [SalesLT].[Customer] 
+WHERE customerid = 1;
+
+Server=tcp:sqlserveremma01.database.windows.net,1433;Initial Catalog=data;Persist Security Info=False;User ID=useradmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+https://1drv.ms/t/s!ArqwfjvG_i6NgWUw6Q80kdZofAyq?e=cDnhpV
+
+Prueba:
+#r "Newtonsoft.Json"
+
+using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using Newtonsoft.Json;
+
+public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
+{
+    log.LogInformation("C# HTTP trigger function processed a request.");
+
+    string name = req.Query["name"];
+
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+    dynamic data = JsonConvert.DeserializeObject(requestBody);
+    name = name ?? data?.name;
+
+    string responseMessage = string.IsNullOrEmpty(name)
+        ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
+                : $"Hola, {name}. ¡Ejecución exitosa!";
+
+            return new OkObjectResult(responseMessage);
+}
+
+Conección a BD
+//Function SQL
+
+#r "Newtonsoft.Json"
+#r "System.Configuration" 
+#r "System.Data"
+
+using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using Newtonsoft.Json;
+
+// System Libraries 
+using System.Configuration; 
+using System.Data.SqlClient; 
+
+public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
+{
+    log.LogInformation("C# HTTP trigger function processed a request.");
+
+    string name = req.Query["name"];
+
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+    dynamic data = JsonConvert.DeserializeObject(requestBody);
+    name = name ?? data?.name;
+
+    string responseMessage = "";
+
+    //Obtiene la cadena de conexion de una variable
+    var str = Environment.GetEnvironmentVariable("sqldb_connection");                
+
+    using (SqlConnection connection = new SqlConnection(str))
+    {
+        connection.Open();
+
+        String sql = $"select FirstName, Lastname from [saleslt].[Customer] where CustomerID={name}";
+        using (SqlCommand command = new SqlCommand(sql, connection))
+        {
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    responseMessage = reader.GetString(0) + " " + reader.GetString(1);
+                }
+            }
+        }
+    }
+
+    return new OkObjectResult(responseMessage);
+}
+
+
+https://function-emma01.azurewebsites.net/api/functiondemo?code=YUkDUnKYibUbl6JFh7NTjYAeQwKWCPHc80imHsAhdF4eAzFuxGN16Q==
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Static Web-Site</title>
+    <script type="text/javascript">
+        function submitToAPI(e) {
+            e.preventDefault();
+            var xhttp = new XMLHttpRequest();
+            var name = document.getElementById("name-input").value;
+            var url = "https://webappdemo1923.azurewebsites.net/api/HttpTrigger1?code=FA8atC6Agx59CWDqZ2pJVeo2Ou7eSt5aRFMGpRBn8Rjk4QdvBdl37Q=="
+            xhttp.open("GET", url+"&&name="+name,);
+            xhttp.send();
+
+            xhttp.onload = () => {
+                document.getElementById("demo").innerHTML =xhttp.response;
+            };
+            //document.getElementById("demo").innerHTML = xhttp.responseText;
+        }
+    </script>
+
+</head>
+<body>
+    
+    <form id="contact-form" method="post">
+        <form id="contact-form" method="post">
+            <h4>Name:</h4>
+            <input type="text" style="height:35px;" id="name-input" placeholder="Enter name here…" class="form-control" style="width:100%;" /><br/>
+            <button type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+      </form>
+  </form>
+    <p id="demo">Azure demo - Functions</p>
+</body>
+</html>
