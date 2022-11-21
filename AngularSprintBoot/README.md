@@ -194,7 +194,11 @@ INSERT INTO `db_springboot_backend`.`clientes` (`nombre`, `apellido`, `email`, `
 
 Para probar nuestra API, primero se debe ejecutar el proyecto `spring-boot-backedn-apirest` y desde el navegador ingresar la siguiente URL:
 
-`http://localhost:8080/api/clientes/`
+* `http://localhost:8080/api/clientes/`
+
+* `http://localhost:8090/api/clientes/upload`
+
+# 
 
 ## Crear un componente formulario
 
