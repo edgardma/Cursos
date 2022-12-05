@@ -1,7 +1,7 @@
 TENA
 
 user: useradmin
-pass: Password2022
+pass: ************
 
 
 -- Instalar un IIS en Windows
@@ -295,3 +295,105 @@ https://function-emma01.azurewebsites.net/api/functiondemo?code=YUkDUnKYibUbl6JF
     <p id="demo">Azure demo - Functions</p>
 </body>
 </html>
+
+================================================
+21/11/2022
+
+https://microsoftlearning.github.io/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/Instructions/CaseStudy/02-Compute.html
+https://microsoftlearning-github-io.translate.goog/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/Instructions/CaseStudy/02-Compute.html?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp
+
+https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview
+
+
+================================================
+23/11/2022
+https://github.com/jsandersrocks/FailoverSample/raw/master/wwwroot.zip
+
+Server=tcp:sqlserveremma01.database.windows.net,1433;Initial Catalog=data;Persist Security Info=False;User ID=useradmin;Password=Password2022*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+Server=tcp:failover-emma01.database.windows.net,1433;Initial Catalog=data;Persist Security Info=False;User ID=useradmin;Password=Password2022*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+failover-emma01
+
+SELECT TOP (1000) * FROM [dbo].[Items];
+
+================================================
+25/11/2022
+
+https://microsoftlearning-github-io.translate.goog/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/Instructions/CaseStudy/04-Relationalstorage.html?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wap
+
+================================================
+30/11/2022
+
+https://learn.microsoft.com/en-us/azure/data-factory/tutorial-copy-data-tool
+
+FirstName|LastName
+John|Doe
+luis|Perez
+jose|gutierrez
+martha|levano
+Anibel|Luna
+Jossue|Carranza
+
+CREATE TABLE dbo.emp
+(
+    ID int IDENTITY(1,1) NOT NULL,
+    FirstName varchar(50),
+    LastName varchar(50)
+)
+GO
+
+CREATE CLUSTERED INDEX IX_emp_ID ON dbo.emp (ID);
+
+select * from [dbo].[emp]
+
+FirstName|LastName|age
+John|Doe|25
+luis|Perez|15
+jose|gutierrez|20
+martha|levano|17
+Anibel|Luna|26
+Jossue|Carranza|16
+
+CREATE TABLE dbo.emp2
+(
+    ID int IDENTITY(1,1) NOT NULL,
+    FirstName varchar(50),
+    LastName varchar(50),
+    age int,
+    MayorEdad varchar(80)
+)
+GO
+
+CREATE CLUSTERED INDEX IX_emp_ID ON dbo.emp2 (ID);
+
+iif(age>17, "Es mayor de edad", "Es menor de edad")
+
+================================================
+02/12/2022
+
+CREATE TABLE dbo.emp
+(
+    Personid int IDENTITY(1,1) NOT NULL,
+    FirstName varchar(50),
+    LastName varchar(50)
+)
+GO
+
+https://1drv.ms/u/s!ArqwfjvG_i6NgXSdv-R8p2PGBA6s?e=QaCXj1
+
+az account set --subscription bbbaefa4-dac7-485d-aaff-fb93543946c5
+az aks get-credentials --resource-group rg-emma01 --name aks-emma02 -a
+
+kubectl apply -f app.yaml
+
+kubectl get pods
+
+kubectl get services
+
+http://20.236.203.189/api/1
+
+https://apim-emma01.azure-api.net/api/api/1
+
+curl https://apim-emma01.azure-api.net/api/api/1
+
+curl -X GET 'https://apim-emma01.azure-api.net/api/api/1' -H 'Ocp-Apim-Subscription-Key: 6640f4c1899145fabd20be6ea0f86e70'
