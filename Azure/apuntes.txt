@@ -1,7 +1,7 @@
 TENA
 
 user: useradmin
-pass: ************
+pass: **************
 
 
 -- Instalar un IIS en Windows
@@ -396,4 +396,5 @@ https://apim-emma01.azure-api.net/api/api/1
 
 curl https://apim-emma01.azure-api.net/api/api/1
 
-curl -X GET 'https://apim-emma01.azure-api.net/api/api/1' -H 'Ocp-Apim-Subscription-Key: 6640f4c1899145fabd20be6ea0f86e70'
+curl -X GET 'https://apim-emma01.azure-api.net/api/api/1' -H 'Ocp-Apim-Subscription-Key: ********************************'
+
