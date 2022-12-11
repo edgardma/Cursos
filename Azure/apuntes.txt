@@ -1,7 +1,7 @@
 TENA
 
 user: useradmin
-pass: **************
+pass: Password2022
 
 
 -- Instalar un IIS en Windows
@@ -396,5 +396,43 @@ https://apim-emma01.azure-api.net/api/api/1
 
 curl https://apim-emma01.azure-api.net/api/api/1
 
-curl -X GET 'https://apim-emma01.azure-api.net/api/api/1' -H 'Ocp-Apim-Subscription-Key: ********************************'
+curl -X GET 'https://apim-emma01.azure-api.net/api/api/1' -H 'Ocp-Apim-Subscription-Key: 42b13944de4c4f87b3104cbf6a1895d1'
+
+
+================================================
+05/12/2022
+
+annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+	
+kubectl apply -f app.yaml
+
+<rate-limit-by-key calls="3" renewal-period="15" counter-key="@(context.Subscription.Id)" />
+
+https://learn.microsoft.com/en-us/azure/api-management/transform-api
+
+https://learn.microsoft.com/en-us/answers/questions/829259/apim-returning-404-when-mandatory-query-parameter.html
+
+https://learn.microsoft.com/en-us/azure/active-directory/develop/web-app-quickstart?pivots=devlang-python
+
+http://localhost:5000/getAToken
+
+App Id: 02e434cf-c5b5-4638-a41b-1ee56c26153d
+Directory (tenant) Id: 970a6555-a9d5-4d1e-803e-5c48a67753ac
+secret value: pBG8Q~F1RiEWaFNZsZW9gc8bTR3q5OeT9TMbDdtF
+secret id: 9e3d2b3e-bc9b-40cb-bf55-f230da35292c
+
+User.ReadBasic.All
+
+wget https://github.com/Azure-Samples/ms-identity-python-webapp/archive/master.zip
+unzip master.zip
+code app_config.py
+
+az webapp up --sku s1 --name webapp-emma04
+
+'https://webapp-emma04.azurewebsites.net/getAToken
+
+@Microsoft.KeyVault(SecretUri=)
+
+https://learn.microsoft.com/en-us/azure/app-service/app-service-key-vault-references?tabs=azure-cli
 
