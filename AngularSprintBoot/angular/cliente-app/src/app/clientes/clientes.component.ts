@@ -40,6 +40,16 @@ export class ClientesComponent implements OnInit {
           this.paginador = response
         });
     });
+
+    this.modalService.notificarUpload.subscribe(cliente => {
+      this.clientes.map(cienteOriginal => {
+        if (cliente.id == cienteOriginal.id) {
+          cienteOriginal.foto = cliente.foto
+        }
+        return cienteOriginal
+      })
+    })
+
   }
 
   delete(cliente: Cliente): void{
