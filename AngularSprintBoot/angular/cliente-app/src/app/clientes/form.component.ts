@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from './cliente';
+import { Region } from './region';
 import {ClienteService} from './cliente.service'
 import {Router, ActivatedRoute} from '@angular/router'
 import swal from 'sweetalert2'
@@ -10,6 +11,7 @@ import swal from 'sweetalert2'
 })
 export class FormComponent implements OnInit {
   public cliente: Cliente = new Cliente()
+  public regiones: Region[]
   public titulo: string = "Crear Cliente"
   public errores: string[]
 
@@ -29,6 +31,8 @@ export class FormComponent implements OnInit {
           (cliente) => this.cliente = cliente)
       }
     })
+    
+    this.clienteService.getRegiones().subscribe(regiones => this.regiones = regiones)
   }
 
   public create(): void {

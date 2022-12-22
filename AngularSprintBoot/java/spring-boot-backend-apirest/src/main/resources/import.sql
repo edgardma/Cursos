@@ -1,5 +1,5 @@
 INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (1, 'Sudamérica');
-INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (2, 'Centroameérica');
+INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (2, 'Centroamérica');
 INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (3, 'Norteamérica');
 INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (4, 'Europa');
 INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (5, 'Asia');
