@@ -53,15 +53,19 @@ export class FormComponent implements OnInit {
   public update(): void {
     this.clienteService.update(this.cliente)
     .subscribe( json => {
-      this.router.navigate(['/clientes'])
-      swal('Cliente Actualizado', `${json.mensaje}: ${json.cliente.nombre} actualizado con éxito!`, 'success')
-    },
-    err => {
-      this.errores = err.error.errors as string[]
-      console.error('Código del error desde el backend: ' + err.status)
-      console.error(err.error.errors)
-    }
-  )
+        this.router.navigate(['/clientes'])
+        swal('Cliente Actualizado', `${json.mensaje}: ${json.cliente.nombre} actualizado con éxito!`, 'success')
+      },
+      err => {
+        this.errores = err.error.errors as string[]
+        console.error('Código del error desde el backend: ' + err.status)
+        console.error(err.error.errors)
+      }
+    )
+  }
+
+  public compararRegion(o1: Region, o2: Region): boolean {
+    return o1 == null || o2 == null || o1 == undefined || o2 == undefined ? false : o1.id === o2.id
   }
 
 }
