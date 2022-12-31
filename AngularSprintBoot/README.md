@@ -198,8 +198,6 @@ Para probar nuestra API, primero se debe ejecutar el proyecto `spring-boot-backe
 
 * `http://localhost:8090/api/clientes/upload`
 
-# 
-
 ## Crear un componente formulario
 
 Para crear un formulario, se debe ejecutar la siguiente sentencia:
@@ -228,4 +226,19 @@ ng add @angular/material
 ng add @angular/material-moment-adapter
 
 npm install --save moment
+```
+
+## Creación de llaves públicas y privadas:
+
+Para este proyecto se ha usado OpenSSL, específicamente la versión 1.1 ya que con la versión mas actual no funciona, para la generación de las llaves públicas y privadas:
+
+```shell
+## Crear la llave
+openssl genrsa -out jwt.pem
+
+## Mostrar en pantalla la llave privada
+openssl rsa -in jwt.pem
+
+## Mostrar en pantalla la llave publica
+openssl rsa -in jwt.pem -pubout
 ```
