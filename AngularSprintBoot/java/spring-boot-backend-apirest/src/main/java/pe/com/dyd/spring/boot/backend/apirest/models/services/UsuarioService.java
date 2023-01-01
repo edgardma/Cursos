@@ -19,7 +19,7 @@ import pe.com.dyd.spring.boot.backend.apirest.models.dao.IUsuarioDao;
 import pe.com.dyd.spring.boot.backend.apirest.models.entity.Usuario;
 
 @Service
-public class UsuarioService implements UserDetailsService {
+public class UsuarioService implements IUsuarioService, UserDetailsService {
 	
 	private static final String INFO_ROL = "Rol: '{0}'";
 	private static final String ERROR_LOGIN_NO_EXISTE1 = "Error en el login: no existe el usuario '{0}' en el sistema!!";
@@ -47,6 +47,11 @@ public class UsuarioService implements UserDetailsService {
 				.collect(Collectors.toList());
 		
 		return new User(usuario.getUsername(), usuario.getPassword(), authorities);
+	}
+
+	@Override
+	public Usuario findByUserName(String username) {
+		return usuarioDao.findByUsername(username);
 	}
 
 }
