@@ -197,8 +197,8 @@ INSERT INTO `db_springboot_backend`.`clientes` (`region_id`, `nombre`, `apellido
 INSERT INTO `db_springboot_backend`.`clientes` (`region_id`, `nombre`, `apellido`, `email`, `create_at`) VALUES (1, 'Manuel', 'Gonzales', 'manuel.gonzales@empresa.com', '2020-01-04');
 INSERT INTO `db_springboot_backend`.`clientes` (`region_id`, `nombre`, `apellido`, `email`, `create_at`) VALUES (1, 'Luis', 'Palma', 'luis.palma@empresa.com', '2020-01-04');
 
-INSERT INTO `db_springboot_backend`.`usuarios` (`username`, `password`, `enabled`) VALUES ('andres', '$2a$10$2w1Fz4FZV9pG2fBlNaXa3.2JXEhstv5UcJNAbsqyyRt8CT.b.EnUG', 1);
-INSERT INTO `db_springboot_backend`.`usuarios` (`username`, `password`, `enabled`) VALUES ('admin', '$2a$10$VQ2MDdihtWV8EoFihmxJUeAyaSjKYkdes0BtNtSszF1b8dSkCjHDG', 1);
+INSERT INTO `db_springboot_backend`.`usuarios` (`username`, `password`, `enabled`, `nombre`, `apellido`, `email`) VALUES ('edgard', '$2a$10$2w1Fz4FZV9pG2fBlNaXa3.2JXEhstv5UcJNAbsqyyRt8CT.b.EnUG', 1, 'Edgard', 'Marquez', 'edgard.marquez@gmail.com');
+INSERT INTO `db_springboot_backend`.`usuarios` (`username`, `password`, `enabled`, `nombre`, `apellido`, `email`) VALUES ('admin', '$2a$10$VQ2MDdihtWV8EoFihmxJUeAyaSjKYkdes0BtNtSszF1b8dSkCjHDG', 1, 'John', 'Doe', 'john.doe@gmail.com');
 
 INSERT INTO `db_springboot_backend`.`roles` (`nombre`) VALUES ('ROLE_USER');
 INSERT INTO `db_springboot_backend`.`roles` (`nombre`) VALUES ('ROLE_ADMIN');
