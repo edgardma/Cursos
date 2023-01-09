@@ -28,7 +28,7 @@ export class AuthService {
     if (this._token != null) {
       return this._token
     } else if (this._token == null && sessionStorage.getItem('token') != null) {
-      this._token = JSON.parse(sessionStorage.getItem('token'))
+      this._token = sessionStorage.getItem('token')
       return this._token
     }
 
@@ -82,6 +82,14 @@ export class AuthService {
     }
 
     return false
+  }
+
+  logout(): void {
+    this._token = null
+    this._usuario = null
+    sessionStorage.clear()
+    sessionStorage.removeItem('token')
+    sessionStorage.removeItem('usuario')
   }
 
 }
