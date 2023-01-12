@@ -244,6 +244,6 @@ public class ClienteRestController {
 	@Secured("ROLE_ADMIN")
 	@GetMapping("/clientes/regiones")
 	public List<Region> listarRegiones() {
-		return clienteService.findAllRegiones() ;
+		return clienteService.findAllRegiones();
 	}
 }
