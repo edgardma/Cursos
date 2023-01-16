@@ -118,7 +118,7 @@ Estímulo -> Tácticas para controlar la respuesta -> Respuesta
 
 Falla -> Táctica para controlar la Disponibilidad -> Falla oculta o sistema reparado
 
-Disponibilidad:
+Tácticas:
 
 - Detección:
   
@@ -158,7 +158,7 @@ Disponibilidad:
 
 Pedido de Cambio -> Tácticas para controlar la mantenibilidad -> Cambio hecho, probado y desplegado.
 
-Mantenibilidad:
+Tácticas:
 
 - Confinar modificaciones
   
@@ -198,7 +198,7 @@ Mantenibilidad:
 
 Eventos -> Tácticas para controlar la eficiencia -> Respuesta dentro del tiempo esperado
 
-Eficiencia de ejecución:
+Tácticas:
 
 - Demanda de recursos
   
@@ -219,3 +219,167 @@ Eficiencia de ejecución:
   - Aumentar recursos
 
 - Arbitraje de recursos
+  
+  - Políticas de planificación de tareas
+
+### Escenario: Seguridad
+
+Ataque -> Tácticas para controlar la seguridad -> Detección resistencia o recuperación
+
+Tácticas:
+
+- Detectar ataques
+  
+  - Detectores de intrusos
+
+- Recuperación de ataques
+  
+  - Restauración -> Disponibilidad
+  
+  - Identificación { Traza de auditoría
+
+- Resistencia al ataque
+  
+  - Autenticación
+  
+  - Autorización
+  
+  - Confidencialidad de datos
+  
+  - Integridad
+  
+  - Limitar exposición
+  
+  - Limitar acceso
+
+### Escenario: Capacidad de Prueba
+
+Funcionalidad -> Tácticas para controlar la capacidad de prueba -> Fallas detectadas
+
+Tácticas:
+
+- Entradas y salidas
+  
+  - Captura y reproducción
+  
+  - Separar interfaz de implementación
+  
+  - Acceso exclusivo para pruebas
+
+- Monitoreo interno
+  
+  - Monitoreo incorporado
+
+### Escenario: Usabilidad
+
+Pedido de un usuario -> Tácticas para controlar la usabilidad -> Información y asistencia adecuada al usuario
+
+Tácticas:
+
+- Separar la interfaz de usuario
+  
+  - Mantenibilidad: Coherencia semántica
+
+- Iniciativas del usuario
+  
+  - Cancelar -> Dependerá del tiempo del proceso
+  
+  - Deshacer -> A una acción el usuario podría deshacer lo realizado
+  
+  - Agregación 
+  
+  - Múltiples vistas
+
+- Iniciativas del sistema
+  
+  - Modelo del usuario
+  
+  - Modelo del sistema
+  
+  - Modelo de la tarea
+
+## Validar las decisiones
+
+ATAM
+
+Métricas -> Pruebas automatizadas -> Umbrales -> Métricas ->
+
+### Arquitectura en evolución
+
+## Diseño de una arquitectura Start-up
+
+## Cómo comunicar la arquitectura: Vista y puntos de vista
+
+"Esencialmente, todo modelo es incorrecto. Pero algunos son útiles" Empiral Model-Building and Responce Surfaces (George Box, 1987)
+
+### Tipos:
+
+- Arquitectura restrictiva: Restringe las decisiones a tomar.
+
+- Arquitectura descriptiva: Documenta la decisiones tomadas.
+
+### Comunicación:
+
+- Arquitecto y Analista -> Negociación de requerimientos
+
+- Arquitecto y Operaciones -> Cálculo de recursos
+
+- Equipo de Desarrollo -> Restricciones y libertades
+
+- Diseñadores de Productos dependientes -> Definición de interoperabilidad
+
+- Gestores de proyectos -> Gestión de equipos y recursos
+
+- Equipo de Calidad -> Métricas y conformidad
+
+## Documentación vs Implementación
+
+- Modelo de arquitectura:
+  
+  - Módulos
+  
+  - Componentes
+  
+  - Conectores
+  
+  - Restricciones
+  
+  - Estilo
+  
+  - Patrones
+  
+  - Atributos de calidad
+
+- Código fuente:
+  
+  - Paquetes
+  
+  - clases
+  
+  - interfaces
+  
+  - Métodos
+  
+  - Funciones
+  
+  - Parámetros
+  
+  - Tipos
+
+La fuente de la verdad es el Código Fuente
+
+Estrategias:
+
+- Ignorar divergencia
+
+- Modelado ad-hoc
+
+- Solo modelo de alto nivel
+
+- Sincronización en hitos del ciclo de vida
+
+- Sincronización en crisis
+
+- Sincronización constante
+
+
