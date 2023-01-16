@@ -147,5 +147,75 @@ Disponibilidad:
   - Punto de control / Retroceso
 
 - Prevención
+  
+  - Quitar de servicio
+  
+  - Transacciones
+  
+  - Monitoreo de procesos
 
+### Escenario: Mantenibilidad
 
+Pedido de Cambio -> Tácticas para controlar la mantenibilidad -> Cambio hecho, probado y desplegado.
+
+Mantenibilidad:
+
+- Confinar modificaciones
+  
+  - Coherencia semántica
+    
+    - Abstraer servicios comunes
+  
+  - Generalizar
+  
+  - Limitar opciones
+  
+  - Anticipar cambios
+
+- Prevenir efectos dominó
+  
+  - Ocultar información
+  
+  - Mantener la interfaz
+  
+  - Restringir comunicación
+  
+  - Intermediarios
+
+- Definir enlace
+  
+  - Registro en ejecución
+  
+  - Archivos de configuración
+  
+  - Polimorfismo
+  
+  - Reemplazo de componentes
+  
+  - Adherir a protocolos
+
+### Escenario: Eficiencia de ejecución
+
+Eventos -> Tácticas para controlar la eficiencia -> Respuesta dentro del tiempo esperado
+
+Eficiencia de ejecución:
+
+- Demanda de recursos
+  
+  - Mejorar la eficiencia computacional
+  
+  - Reducir sobrecarga
+  
+  - Manejar tasa de eventos
+  
+  - Frecuencia de muestreo
+
+- Gestión de recursos
+  
+  - Concurrencia
+  
+  - Réplicas
+  
+  - Aumentar recursos
+
+- Arbitraje de recursos
