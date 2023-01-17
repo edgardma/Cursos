@@ -436,3 +436,23 @@ az webapp up --sku s1 --name webapp-emma04
 
 https://learn.microsoft.com/en-us/azure/app-service/app-service-key-vault-references?tabs=azure-cli
 
+
+================================================
+07/12/2022
+AzureFirewallSubnet
+
+===============================================================================================
+09/10
+
+Simuladores:
+-----------
+https://www.examtopics.com/exams/microsoft/az-900/
+
+Caso:
+----
+https://microsoftlearning-github-io.translate.goog/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/Instructions/CaseStudy/07-Access.html?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp
+
+https://microsoftlearning-github-io.translate.goog/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/Instructions/CaseStudy/08-Logging.html?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp
+
+https://microsoftlearning-github-io.translate.goog/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/Instructions/CaseStudy/08-Logging.html?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp
+=es&_x_tr_pto=wapp

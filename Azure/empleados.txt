@@ -1,0 +1,7 @@
+FirstName|LastName|age
+John|Doe|25
+luis|Perez|15
+jose|gutierrez|20
+martha|levano|17
+Anibel|Luna|26
+Jossue|Carranza|16
