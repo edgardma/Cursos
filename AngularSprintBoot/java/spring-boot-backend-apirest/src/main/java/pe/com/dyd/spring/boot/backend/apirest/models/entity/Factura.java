@@ -20,6 +20,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item;
+
 @Entity
 @Table(name="facturas")
 public class Factura implements Serializable {
@@ -89,5 +91,12 @@ public class Factura implements Serializable {
 	public void setItems(List<ItemFactura> items) {
 		this.items = items;
 	}
-	
+	public Double getTotal() {
+		Double total = 0.00;
+		for (ItemFactura item: items) {
+			total += item.getImporte();
+		}
+		
+		return total;
+	}
 }
