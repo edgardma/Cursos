@@ -22,6 +22,8 @@ import javax.persistence.TemporalType;
 
 import org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="facturas")
 public class Factura implements Serializable {
@@ -39,9 +41,11 @@ public class Factura implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date creatAt;
 	
+	@JsonIgnoreProperties({"facturas", "hibernateLazyInitializer", "handler"})
 	@ManyToOne(fetch=FetchType.LAZY)
 	private Cliente cliente;
 	
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="factura_id")
 	private List<ItemFactura> items;
