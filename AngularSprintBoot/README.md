@@ -24,7 +24,7 @@ Para poder llevar el curso es necesario instalar lo siguiente:
   ## Ejecutar como administrador
   ## Windows
   npm install -g typescript
-  ## Ubuntu
+  ## Ubuntu / Mac
   sudo npm install -g typescript
   ## Validar la instalación
   tsc -v
@@ -36,7 +36,7 @@ Para poder llevar el curso es necesario instalar lo siguiente:
   ## Ejecutar como administrador
   ## Windows
   npm install -g @angular/cli
-  ## Ubuntu
+  ## Ubuntu / Mac
   sudo npm install -g @angular/cli
   ## Validar la instalación
   ng version
@@ -58,7 +58,7 @@ Para poder llevar el curso es necesario instalar lo siguiente:
   
   - `emmet`
 
-- En el caso de que no se puede instalar un paquete, se puede ejecutar la siguiente sentencia:
+- En el caso de que no se puede instalar un paquete, se puede ejecutar la siguiente sentencia (solo si tienes Atom):
   
   ```shell
   ## Ejecutar como administrador
