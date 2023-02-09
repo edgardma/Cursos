@@ -1,5 +1,46 @@
 # Curso Profesional de Arquitectura de Software
 
+## Atributos de Calidad
+
+Los **Atributos de Calidad** son las expectativas de *usuario*, en general implícitas, de cuán bien funciona un producto.
+
+Estas **expectativas que hay que cumplir** que no tienen que ver con lo funcional, sino, con lo **no funcional**. Cuán bien se comporta nuestro sistema en *cierto contexto* a ciertos *estímulos*.
+
+## Idoneidad funcional
+
+Es lo que conecta lo que el usuario quiere hacer (objetivos que tiene que resolver con el sistema) y como están implementadas funcionalmente en el sistema:
+
+- Completitud Funcional: 
+  
+  Cuan completa esta la implementación con respecto a lo que se espera que haga el sistema. (Comparación: Requerimientos Funcionales vs Funcionalidades implementadas)
+  
+  **Se mide**, comparando los requerimientos funcionales que nos pidieron vs los que ya implementamos.
+
+- Exactitud Funcional
+  
+  Cuan preciso es el sistema, para implementar lo que se este implementando. (Comparación: resultado esperado y resultado obtenido)
+  **Se mide**, comparando el resultado esperado con el resultado obtenido.
+
+- Pertinencia Funcional
+  
+  Cuan alineado esta lo que se implemento con lo que se necesita. (Comparación: objetivos cumplidos y objetivos esperados)
+  
+  **Se mide**, comparando cuantos objetivos se cumplieron y cuantos objetivos estábamos esperando que se pudieran cumplir.
+
+## Eficiencia de ejecución
+
+Cuan bueno es eficiente es el sistema a la hora de responder a lo que el usuario lo necesita y a su vez teniendo los recursos que el sistema necesita cuan bueno con esos recursos cuanto los aprovecha o desaprovecha.
+
+- Tiempo a Comportamiento
+  
+  Este nos dice cuan bueno es el sistema respondiendo al usuario; específicamente, cuanto tarda el sistema y cuanto esperamos que ese sistema tarde. (Comparación: Tiempo transcurrido entre pedido y respuesta y tiempo esperado o tiempo máximo tolerado)
+  
+  **Se mide:** a través de la medición de la respuesta, dado un estimulo y luego compararlo con el tiempo que esperamos que tarde el sistema.
+
+- Uso de Recursos
+
+- Capacidad
+
 ## Tipos de Arquitectura
 
 ### Comparte-nada: Componente Proceso de reportes
@@ -381,5 +422,3 @@ Estrategias:
 - Sincronización en crisis
 
 - Sincronización constante
-
-
