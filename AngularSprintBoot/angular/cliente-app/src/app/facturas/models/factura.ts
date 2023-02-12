@@ -7,6 +7,6 @@ export class Factura {
     observacion: string
     items: Array<ItemFactura> = []
     cliente: Cliente
-    total: number
     creatAt: string
+    total: number
 }
