@@ -57,7 +57,7 @@ export class ClientesComponent implements OnInit {
   delete(cliente: Cliente): void{
     swal({
       title: '¿Está seguro de eliminar?',
-      text: `¿Seguro que desea eliminar el cliente ${cliente.nombre} ${cliente.apellido}`,
+      text: `¿Seguro que desea eliminar el cliente ${cliente.nombre} ${cliente.apellido}?`,
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
