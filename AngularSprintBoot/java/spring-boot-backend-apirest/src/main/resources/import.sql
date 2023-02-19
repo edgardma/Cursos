@@ -207,13 +207,13 @@ INSERT INTO `db_springboot_backend`.`usuarios_roles` (`usuario_id`, `rol_id`) VA
 INSERT INTO `db_springboot_backend`.`usuarios_roles` (`usuario_id`, `rol_id`) VALUES (2, 1);
 INSERT INTO `db_springboot_backend`.`usuarios_roles` (`usuario_id`, `rol_id`) VALUES (2, 2);
 
-INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('PRODUCTO 1', 12345, NOW());
-INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('PRODUCTO 2', 54321, NOW());
-INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('PRODUCTO 3', 98765, NOW());
-INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('PRODUCTO 4', 56789, NOW());
-INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('PRODUCTO 5', 10000, NOW());
-INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('PRODUCTO 6', 20000, NOW());
-INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('PRODUCTO 7', 30000, NOW());
+INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('Sony Camara Alfa', 12345, NOW());
+INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('Sony Laptop S10', 54321, NOW());
+INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('Panasonic TV 45 Smart', 98765, NOW());
+INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('Panasonic Equipo Sound', 56789, NOW());
+INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('Samsung Refrigeradora 25', 10000, NOW());
+INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('Samsing Celular S3', 20000, NOW());
+INSERT INTO `db_springboot_backend`.`productos` (`nombre`, `precio`, `create_at`) VALUES ('LG TV 32 Smart', 30000, NOW());
 
 INSERT INTO `db_springboot_backend`.`facturas` (`descripcion`, `observacion`, `cliente_id`, `create_at`) VALUES ('FACTURA 1', null, 1, NOW());
 INSERT INTO `db_springboot_backend`.`facturas_items` (`cantidad`, `factura_id`, `producto_id`) VALUES (1, 1, 1);
