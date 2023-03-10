@@ -242,3 +242,17 @@ openssl rsa -in jwt.pem
 ## Mostrar en pantalla la llave publica
 openssl rsa -in jwt.pem -pubout
 ```
+
+## Publicar un proyecto Java con Maven
+
+Para generar la distribución de un proyecto Maven, se debe ejecutar la siguiente sentencia:
+
+```shell
+mvn clean package
+```
+
+Para generar el .jar se debe ejecutar la siguiente sentencia:
+
+```shell
+java -jar .\target\nombre_proyecto
+```
