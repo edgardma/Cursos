@@ -1,11 +1,11 @@
-INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (1, 'Sudam√©rica');
-INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (2, 'Centroam√©rica');
-INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (3, 'Norteam√©rica');
+INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (1, 'SudamÈrica');
+INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (2, 'CentroamÈrica');
+INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (3, 'NorteamÈrica');
 INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (4, 'Europa');
 INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (5, 'Asia');
 INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (6, 'Africa');
 INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (7, 'Ocean√≠a');
-INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (8, 'Ant√°rtida');
+INSERT INTO `db_springboot_backend`.`regiones` (`id`, `nombre`) VALUES (8, 'Ant·rtida');
 
 INSERT INTO `db_springboot_backend`.`clientes` (`region_id`, `nombre`, `apellido`, `email`, `create_at`) VALUES (1, 'Edgard', 'Marquez', 'prueba1@empresa.com', '2020-01-01');
 INSERT INTO `db_springboot_backend`.`clientes` (`region_id`, `nombre`, `apellido`, `email`, `create_at`) VALUES (1, 'Leon', 'Mendoza', 'prueba2@empresa.com', '2020-01-02');
