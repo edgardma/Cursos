@@ -245,7 +245,7 @@ openssl rsa -in jwt.pem -pubout
 
 ## Publicar un proyecto Java con Maven
 
-Para generar la distribución de un proyecto Maven, se debe ejecutar la siguiente sentencia:
+Para generar la distribución de un proyecto Maven, se debe ejecutar la siguiente sentencia en el directorio del proyecto:
 
 ```shell
 mvn clean package
@@ -255,4 +255,12 @@ Para generar el .jar se debe ejecutar la siguiente sentencia:
 
 ```shell
 java -jar .\target\nombre_proyecto
+```
+
+## Publicar un proyecto Angular
+
+Para generar un proyecto Angular, se debe ejecutar la siguiente sentencia en la ruta del directorio del proyecto:
+
+```shell
+ng build --prod
 ```
