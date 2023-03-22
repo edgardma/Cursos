@@ -136,6 +136,8 @@ Para instalar Bootstrap, JQuery y Popper desde línea de comandos, nos ubicamos 
 ## La clausula 'save' es para registrar la dependencia en el archivo
 ## package.json del proyecto
 npm install bootstrap@5.1.3 jquery popper.js --save
+## o
+npm i bootstrap@5.1.3 jquery popper.js --save
 ```
 
 Asimismo, se debe instalar el paquete `SweetAlert2` se debe ejecutar la siguiente sentencia desde la ruta del proyecto:
@@ -146,6 +148,25 @@ npm install sweetalert2 --save
 
 ## Para instalar la versión del tutorial
 npm install --save sweetalert2@7.26.9
+```
+
+Para poder usar los estilos de `Bootstrap` en el proyecto, se debe adicionar lo siguiente en el archivo `angular.json`:
+
+```json
+            "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+```
+
+Finalmente, para poder usar correctamente las librerías instaladas, se debe modificar el archivo `angular.json` poniendo las siguientes líneas:
+
+```json
+            "scripts": [
+              "node_modules/jquery/dist/jquery.slim.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
 ```
 
 ## Instalación de herramientas de Back-end:
