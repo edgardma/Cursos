@@ -272,7 +272,7 @@ Para generar la distribución de un proyecto Maven, se debe ejecutar la siguient
 mvn clean package
 ```
 
-Para generar el .jar se debe ejecutar la siguiente sentencia:
+Para ejecutar el `.jar` se debe ejecutar la siguiente sentencia:
 
 ```shell
 java -jar .\target\nombre_proyecto
