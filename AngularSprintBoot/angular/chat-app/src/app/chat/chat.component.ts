@@ -16,6 +16,7 @@ export class ChatComponent {
   }
 
   ngOnInit() {
+    this.client = new Client();
     this.client.webSocketFactory = () => {
       return new SockJS("http://localhost:8080/chat-websocket");
     }
