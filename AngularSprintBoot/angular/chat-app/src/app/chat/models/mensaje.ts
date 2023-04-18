@@ -3,4 +3,5 @@ export class Mensaje {
     fecha: Date = new Date()
     username: string = ''
     tipo: string = ''
+    color: string = ''
 }
