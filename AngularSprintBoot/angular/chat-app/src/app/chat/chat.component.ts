@@ -14,6 +14,7 @@ export class ChatComponent {
   conectado: boolean = false
   mensaje: Mensaje = new Mensaje()
   mensajes: Mensaje[] = []
+  escribiendo: string = ''
 
   constructor() {
     this.client = new Client()
@@ -42,6 +43,12 @@ export class ChatComponent {
         this.mensajes.push(mensaje)
         console.log(mensaje)
       })
+
+      this.client.subscribe('/chat/escribiendo', e => {
+        this.escribiendo = e.body
+        setTimeout(() => this.escribiendo = '', 3000) 
+      })
+
       this.mensaje.tipo = 'NUEVO_USUARIO'
       this.client.publish({
         destination: '/app/mensaje',
@@ -71,6 +78,13 @@ export class ChatComponent {
     })
     console.log(this.mensaje)
     this.mensaje.texto = ''
+  }
+
+  escribiendoEvento(): void {
+    this.client.publish({
+      destination: '/app/escribiendo',
+      body: this.mensaje.username
+    })
   }
 
 }

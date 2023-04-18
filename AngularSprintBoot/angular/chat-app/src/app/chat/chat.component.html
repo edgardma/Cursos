@@ -1,4 +1,4 @@
-<div class="card mx-4 my-4">
+<div #scrollChat [scrollTop]="scrollChat.scrollHeight" class="card mx-4 my-4">
     <div class="card-header">
         <ul class="nav nav-pills card-header-pills">
             <li class="nav-item mx-2" *ngIf="!conectado">
@@ -32,10 +32,12 @@
         <form class="form-inline">
             <ul class="nav nav-pills card-header-pills">
                 <div class="form-group mx-3">
-                    <input type="text" [(ngModel)]="mensaje.texto" class="form-control" placeholder="Escribe un mensaje..." name="texto">
+                    <input type="text" [(ngModel)]="mensaje.texto" class="form-control" placeholder="Escribe un mensaje..." name="texto"
+                    (keyup)="escribiendoEvento()">
                 </div>
                 <button class="btn btn-primary" (click)="enviarMensaje()" type="submit">Enviar</button>
             </ul>
         </form>
+        <div>{{escribiendo}}</div>
     </div>
 </div>
