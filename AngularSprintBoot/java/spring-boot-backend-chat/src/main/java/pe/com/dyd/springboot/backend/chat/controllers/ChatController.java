@@ -14,8 +14,9 @@ public class ChatController {
 	@MessageMapping("/mensaje")
 	@SendTo("/chat/mensaje")
 	public Mensaje recibeMensaje(Mensaje mensaje) {
-		mensaje.setFecha(new Date());
-		mensaje.setTexto("Recibido por el broker: " + mensaje.getTexto());
+		if (mensaje.getTipo().equals("NUEVO_USUARIO")) {
+			mensaje.setTexto("Nuevo usuario");
+		}
 		
 		return mensaje;
 	}
