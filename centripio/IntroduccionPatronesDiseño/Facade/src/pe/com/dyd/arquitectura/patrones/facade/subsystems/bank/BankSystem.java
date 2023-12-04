@@ -6,7 +6,7 @@ import pe.com.dyd.arquitectura.patrones.facade.util.OnMemoryDataBase;
 
 public class BankSystem {
 	
-	public String transfer(TransferRquest request) throws Exception {
+	public String transfer(TransferRequest request) throws Exception {
 		
 		String cardNumberPrefix = request.getCardNumber().substring(0, 3);
 		if (!OnMemoryDataBase.validateCardBins(cardNumberPrefix)) {

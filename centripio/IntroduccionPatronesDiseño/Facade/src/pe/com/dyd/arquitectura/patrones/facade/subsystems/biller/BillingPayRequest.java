@@ -5,6 +5,12 @@ public class BillingPayRequest {
 	private long customerId;
 	private double amount;
 
+	public BillingPayRequest(long customerId, double amount) {
+		super();
+		this.customerId = customerId;
+		this.amount = amount;
+	}
+
 	public double getAmount() {
 		return amount;
 	}

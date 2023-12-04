@@ -1,6 +1,6 @@
 package pe.com.dyd.arquitectura.patrones.facade.subsystems.biller;
 
-import pe.com.dyd.arquitectura.patrones.facade.subsystems.crm.Customer;
+import pe.com.dyd.arquitectura.patrones.facade.util.Customer;
 import pe.com.dyd.arquitectura.patrones.facade.util.OnMemoryDataBase;
 
 public class BillingSystem {
