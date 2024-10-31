@@ -4,13 +4,20 @@ metadata:
   creationTimestamp: null
   labels:
     run: hello-world
-  name: hello-world
+  name: hello-world2
 spec:
   containers:
   - image: fiunchinho/codely-docker:latest
     name: hello-world
     ports:
     - containerPort: 80
+    resources:
+      limits:
+        cpu: 50m
+        memory: 32Mi
+      requests:
+        cpu: 50m
+        memory: 32Mi
     resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Never
