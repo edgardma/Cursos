@@ -34,6 +34,9 @@ public class UserRestController {
         users.add(new User("Pepe", "Lopez"));
         users.add(new User("Lucho", "Gonzales"));
 
+        // Otra forma
+        // List<User> users = Arrays.asList(user1, user2, user3);
+
         return users;
     }
 
