@@ -1,0 +1,277 @@
+WEBVTT
+
+1
+00:00:00.106 --> 00:00:10.106
+[MÚSICA]
+
+2
+00:00:15.950 --> 00:00:19.777
+Cuando piensas en una pizza, hay muchos ingredientes diferentes que la crean.
+
+3
+00:00:19.777 --> 00:00:22.931
+Cada uno de estos ingredientes son componentes separados, pero interactúan y
+
+4
+00:00:22.931 --> 00:00:24.041
+se complementan entre sí.
+
+5
+00:00:24.041 --> 00:00:27.630
+Todos ellos existen dentro del sistema mayor, en este caso, la pizza.
+
+6
+00:00:27.630 --> 00:00:31.040
+Los diagramas de componentes de UML se refieren a los componentes de un sistema.
+
+7
+00:00:31.040 --> 00:00:35.360
+Los componentes se definen como unidades encapsuladas independientes dentro de un sistema.
+
+8
+00:00:35.360 --> 00:00:39.200
+Cada componente proporciona una interfaz para que otros componentes interactúen con él.
+
+9
+00:00:39.200 --> 00:00:43.190
+Los diagramas de componentes se utilizan para visualizar cómo interactúan las piezas de un sistema y
+
+10
+00:00:43.190 --> 00:00:45.360
+qué relaciones tienen entre ellas.
+
+11
+00:00:45.360 --> 00:00:48.610
+Lo que diferencia a los diagramas de componentes de muchos otros diagramas es que
+
+12
+00:00:48.610 --> 00:00:52.930
+se trata de una estructura de alto nivel y no de detalles como atributos y métodos.
+
+13
+00:00:52.930 --> 00:00:56.570
+Se trata puramente de componentes y de cómo interactúan entre sí.
+
+14
+00:00:56.570 --> 00:00:58.840
+Cuando se piensa en una pizza en un menú del restaurante,
+
+15
+00:00:58.840 --> 00:01:02.800
+la pizza no tiene su preparación y métodos de cocción descritos en el menú.
+
+16
+00:01:02.800 --> 00:01:05.070
+Por ejemplo, piense en una pizza de pollo tailandés.
+
+17
+00:01:05.070 --> 00:01:08.980
+Los ingredientes enumerados en el menú serían pollo, salsa de cacahuete, cilantro,
+
+18
+00:01:08.980 --> 00:01:10.380
+y queso.
+
+19
+00:01:10.380 --> 00:01:12.690
+El menú sólo indica los ingredientes de la pizza,
+
+20
+00:01:12.690 --> 00:01:16.170
+describe cómo se complementan entre sí, y representa cómo interactúan.
+
+21
+00:01:16.170 --> 00:01:19.360
+Al enumerar todos los ingredientes, el cliente puede tener una mejor idea de si
+
+22
+00:01:19.360 --> 00:01:22.679
+o no disfrutarían de la pizza basándose en cómo los componentes se unen como un todo.
+
+23
+00:01:23.930 --> 00:01:26.090
+La descripción va más allá del listado de ingredientes y
+
+24
+00:01:26.090 --> 00:01:28.360
+muestra las interacciones entre ellos.
+
+25
+00:01:28.360 --> 00:01:31.540
+Es lo mismo para nuestro diagrama de componentes, que se centra en el componente en
+
+26
+00:01:31.540 --> 00:01:35.410
+un sistema, no en sus métodos e implementaciones específicas.
+
+27
+00:01:35.410 --> 00:01:38.430
+Los diagramas de componentes son una vista estática del sistema de software y
+
+28
+00:01:38.430 --> 00:01:42.800
+representan el diseño del sistema en un punto específico de su desarrollo y evolución.
+
+29
+00:01:42.800 --> 00:01:43.960
+Eso es como un menú del restaurante,
+
+30
+00:01:43.960 --> 00:01:46.570
+que describe la visión prevista del chef de pizza,
+
+31
+00:01:46.570 --> 00:01:49.580
+de diferentes ofertas de pizza en un punto específico de la vida del restaurante.
+
+32
+00:01:51.580 --> 00:01:55.220
+La base de los diagramas de componentes son los componentes y sus relaciones.
+
+33
+00:01:55.220 --> 00:01:58.220
+Cada componente de un diagrama tiene una relación muy específica con
+
+34
+00:01:58.220 --> 00:02:01.430
+el otro componente a través de la interfaz que proporciona.
+
+35
+00:02:01.430 --> 00:02:02.650
+Este es un conector de bola,
+
+36
+00:02:02.650 --> 00:02:06.540
+que es cómo se muestra una interfaz proporcionada en diagramas de componentes.
+
+37
+00:02:06.540 --> 00:02:10.180
+El propósito de una interfaz proporcionada es mostrar que un componente ofrece una interfaz
+
+38
+00:02:10.180 --> 00:02:12.170
+para que otros interactúen con ella.
+
+39
+00:02:12.170 --> 00:02:14.130
+La interfaz proporcionada significa que los componentes cliente y
+
+40
+00:02:14.130 --> 00:02:17.870
+consumidor tienen una forma de comunicarse con ese componente.
+
+41
+00:02:17.870 --> 00:02:21.260
+Este es un conector de socket, que muestra una interfaz requerida.
+
+42
+00:02:21.260 --> 00:02:24.210
+La interfaz requerida es esencial para el diagrama de componentes
+
+43
+00:02:24.210 --> 00:02:28.380
+para mostrar que un componente espera que una determinada interfaz proporcionada por algún otro componente
+
+44
+00:02:28.380 --> 00:02:31.090
+sea capaz de cumplir sus responsabilidades.
+
+45
+00:02:31.090 --> 00:02:34.290
+En un diagrama de componentes, una relación de ensamblaje es donde la interfaz proporcionada por un componente
+
+46
+00:02:34.290 --> 00:02:38.410
+coincide con la interfaz requerida de otro componente.
+
+47
+00:02:38.410 --> 00:02:41.070
+La interfaz proporcionada está representada por una bola, y
+
+48
+00:02:41.070 --> 00:02:43.179
+la interfaz requerida es representada por un socket.
+
+49
+00:02:45.690 --> 00:02:47.420
+Cuando está creando un diagrama de componentes,
+
+50
+00:02:47.420 --> 00:02:51.140
+el primer paso es identificar los objetos principales utilizados en el sistema.
+
+51
+00:02:51.140 --> 00:02:55.330
+A continuación, identificaría todas las bibliotecas relevantes que necesitaría para su sistema.
+
+52
+00:02:55.330 --> 00:02:57.900
+Finalmente, se le ocurrirían las relaciones encontradas entre estos componentes
+
+53
+00:02:57.900 --> 00:02:58.510
+.
+
+54
+00:03:01.110 --> 00:03:02.970
+Una vez que sus objetos principales han sido identificados,
+
+55
+00:03:02.970 --> 00:03:06.520
+el siguiente paso es identificar las bibliotecas que su sistema utilizará.
+
+56
+00:03:06.520 --> 00:03:10.170
+Los diagramas de componentes no se centran puramente en lo que implementa.
+
+57
+00:03:10.170 --> 00:03:13.470
+También se deben identificar todas las dependencias de implementación de terceros e integrar
+
+58
+00:03:13.470 --> 00:03:16.030
+en el diagrama cuando corresponda.
+
+59
+00:03:16.030 --> 00:03:18.980
+Esto significa que si utiliza una biblioteca de terceros en su sistema,
+
+60
+00:03:18.980 --> 00:03:20.860
+debe denotarla en el diagrama de componentes.
+
+61
+00:03:23.620 --> 00:03:26.040
+Echemos un vistazo a algunos diagramas de componentes específicos ahora.
+
+62
+00:03:29.660 --> 00:03:33.790
+En general, el diagrama de componentes es muy útil para ilustrar las relaciones
+
+63
+00:03:33.790 --> 00:03:37.060
+entre los componentes sin demasiados detalles abrumadores.
+
+64
+00:03:37.060 --> 00:03:39.440
+Debido a su alto nivel de énfasis, es rápido de dibujar y
+
+65
+00:03:39.440 --> 00:03:42.570
+se vuelve útil al principio del proceso de diseño.
+
+66
+00:03:42.570 --> 00:03:46.000
+Estos diagramas de componentes se pueden dibujar en diferentes niveles y le permiten representar
+
+67
+00:03:46.000 --> 00:03:51.030
+no solo sistemas enteros, sino también centrarse en subsistemas más particulares.
+
+68
+00:03:51.030 --> 00:03:53.750
+Puede elegir la escala de su diagrama de componentes fácilmente,
+
+69
+00:03:53.750 --> 00:03:55.360
+lo que lo convierte en una técnica de diseño versátil.
