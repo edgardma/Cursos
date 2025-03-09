@@ -1,9 +1,9 @@
 package pe.com.dyd.ejemplo.paymentchain.customer.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import pe.com.dyd.ejemplo.paymentchain.customer.entities.Customer;
+import pe.com.dyd.ejemplo.paymentchain.customer.entities.CustomerEntity;
 
-public interface CustomerRepository extends JpaRepository<Customer, Long> {
+public interface CustomerRepository extends JpaRepository<CustomerEntity, Long> {
     
     
 }
