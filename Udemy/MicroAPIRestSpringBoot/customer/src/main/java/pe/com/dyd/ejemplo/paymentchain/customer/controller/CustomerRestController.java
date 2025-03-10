@@ -3,7 +3,9 @@ package pe.com.dyd.ejemplo.paymentchain.customer.controller;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,13 +29,27 @@ public class CustomerRestController {
     }
     
     @GetMapping("/{id}")
-    public CustomerEntity get(@PathVariable String id) {
-        return null;
+    public ResponseEntity<?> get(@PathVariable long id) {
+        Optional<CustomerEntity> customer = customerRepository.findById(id);
+        if (customer.isPresent()) {
+            return new ResponseEntity<>(customer.get(), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
     
     @PutMapping("/{id}")
-    public ResponseEntity<?> put(@PathVariable String id, @RequestBody CustomerEntity input) {
-        return null;
+    public ResponseEntity<?> put(@PathVariable long id, @RequestBody CustomerEntity input) {
+        Optional<CustomerEntity> customer = customerRepository.findById(id);
+        if (customer.isPresent()) {
+            CustomerEntity newCustomer = customer.get();
+            newCustomer.setName(input.getName());
+            newCustomer.setPhone(input.getPhone());
+            CustomerEntity save = customerRepository.save(newCustomer);
+            return new ResponseEntity<>(save, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
     
     @PostMapping
@@ -43,8 +59,14 @@ public class CustomerRestController {
     }
     
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> delete(@PathVariable String id) {
-        return null;
+    public ResponseEntity<?> delete(@PathVariable long id) {
+       Optional<CustomerEntity> customer = customerRepository.findById(id);
+        if (customer.isPresent()) {
+            customerRepository.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
     
 }
