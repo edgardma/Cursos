@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pe.com.dyd.cursos.api.springsecuritycourse.dto.SaveCategory;
-import pe.com.dyd.cursos.api.springsecuritycourse.dto.SaveProduct;
 import pe.com.dyd.cursos.api.springsecuritycourse.persistence.entity.Category;
 import pe.com.dyd.cursos.api.springsecuritycourse.service.CategoryService;
 
@@ -31,7 +30,7 @@ public class CategoryController {
         }
 
         // Estos dos return devuelven lo mismo
-        //return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        // Ejemplo: return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         return ResponseEntity.notFound().build();
     }
 
