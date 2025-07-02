@@ -1,6 +1,8 @@
 package pe.com.dyd.cursos.api.springsecuritycourse.dto;
 
 
+import pe.com.dyd.cursos.api.springsecuritycourse.persistence.util.Role;
+
 import java.io.Serializable;
 
 public class RegisteredUser implements Serializable {
