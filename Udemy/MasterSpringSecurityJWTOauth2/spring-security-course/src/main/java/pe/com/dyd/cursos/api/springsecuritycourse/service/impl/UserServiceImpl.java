@@ -3,6 +3,7 @@ package pe.com.dyd.cursos.api.springsecuritycourse.service.impl;
 import ch.qos.logback.core.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import pe.com.dyd.cursos.api.springsecuritycourse.dto.SaveUser;
 import pe.com.dyd.cursos.api.springsecuritycourse.exception.InvalidPasswordException;
@@ -11,6 +12,7 @@ import pe.com.dyd.cursos.api.springsecuritycourse.persistence.repository.UserRep
 import pe.com.dyd.cursos.api.springsecuritycourse.persistence.util.Role;
 import pe.com.dyd.cursos.api.springsecuritycourse.service.UserService;
 
+@Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
