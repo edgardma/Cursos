@@ -12,6 +12,8 @@ import pe.com.dyd.cursos.api.springsecuritycourse.persistence.repository.UserRep
 import pe.com.dyd.cursos.api.springsecuritycourse.persistence.util.Role;
 import pe.com.dyd.cursos.api.springsecuritycourse.service.UserService;
 
+import java.util.Optional;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -32,6 +34,11 @@ public class UserServiceImpl implements UserService {
         user.setRole(Role.ROLE_CUSTOMER);
 
         return userRepository.save(user);
+    }
+
+    @Override
+    public Optional<User> findOneByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 
     private void validatePassword(SaveUser dto) {
