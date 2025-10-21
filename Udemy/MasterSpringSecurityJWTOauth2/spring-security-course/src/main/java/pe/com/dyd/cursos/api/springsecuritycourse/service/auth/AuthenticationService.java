@@ -70,4 +70,14 @@ public class AuthenticationService {
 
         return authRsp;
     }
+
+    public Boolean validateToken(String jwt) {
+        try {
+            jwtService.extractUsername(jwt);
+            return true;
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            return false;
+        }
+    }
 }
